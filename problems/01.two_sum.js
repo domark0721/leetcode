@@ -3,11 +3,11 @@
  * @param {number} target
  * @return {number[]}
  */
-const twoSum = function a(nums, target) {
-  for (let temp = 0; temp < nums.length; temp += 1) {
-    for (let temp2 = 0; temp2 < nums.length; temp2 += 1) {
-      if (temp !== temp2 && nums[temp] + nums[temp2] === target) {
-        return [temp, temp2];
+const twoSum = (nums, target) => {
+  for (let t = 0; t < nums.length; t += 1) {
+    for (let t2 = 0; t2 < nums.length; t2 += 1) {
+      if (t !== t2 && nums[t] + nums[t2] === target) {
+        return [t, t2];
       }
     }
   }
