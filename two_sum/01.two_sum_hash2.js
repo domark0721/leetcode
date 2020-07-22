@@ -1,5 +1,6 @@
-// two-pass hash table
-
+// one-pass hash table
+// Time complexity: O(n)
+// Space complexity: O(n)
 /**
  * @param {number[]} nums
  * @param {number} target
@@ -7,15 +8,13 @@
  */
 const twoSum = (nums, target) => {
   const map = new Map();
-  for (let i = 0; i < nums.length; i++) {
-    map.set(nums[i], i);
-  }
 
   for (let i = 0; i < nums.length; i++) {
     const complement = target - nums[i];
     if (map.has(complement) && map.get(complement) !== i) {
-      return [i, map.get(complement)];
+      return [map.get(complement), i];
     }
+    map.set(nums[i], i);
   }
   return false;
 };

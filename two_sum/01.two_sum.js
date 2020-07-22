@@ -1,3 +1,7 @@
+// Brute force
+// Time complexity: O(n2)
+// Space complexity: O(1)
+
 /**
  * @param {number[]} nums
  * @param {number} target
